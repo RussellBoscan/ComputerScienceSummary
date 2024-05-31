@@ -1,0 +1,254 @@
+*{
+    cursor: none !important;
+    font-family: "Kode Mono", monospace ;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  #level{
+    visibility: hidden;
+  }
+
+/* Custom cursor */
+#cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    pointer-events: none;
+    background-color: #303336ff;
+    transition: transform ease-out 70ms;
+    z-index: 1000;
+  }
+
+.locked{
+    color: white;
+}
+
+  #stalker {
+    position: fixed;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 40px;
+    height: 40px;
+    background: #d5d5d522;
+    border-radius: 100%;
+    pointer-events: none;
+    box-shadow: 0px 0px 9px 10px rgba(0,0,0,0.2); 
+    transition: transform ease-out 170ms;
+    z-index: 999;
+  }
+/* Custom cursor */
+
+/* Loading Screen */
+.loader {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    display: inline-grid;
+    position: fixed;
+    margin-top: 50vh;
+    margin-left: 45vw;
+    visibility: hidden;
+  }
+  .loader:before,
+  .loader:after {
+    content:"Loading...";
+    grid-area: 1/1;
+    -webkit-mask:linear-gradient(90deg,#000 50%,#0000 0) 0 50%/2ch 100%;
+    animation: l11 1s infinite cubic-bezier(0.5,220,0.5,-220);
+  }
+  .loader:after {
+    -webkit-mask-position:1ch 50%;
+    --s:-1;
+  }
+  @keyframes l11 {100%{transform: translateY(calc(var(--s,1)*0.1%));}}
+/* Loading Screen */
+
+body{
+    /* background-color: #edf289; */
+    background-color: #176b87;
+    width: auto;
+    margin: 0;
+}
+
+.backBtn{
+  width: 3.5rem;
+  height: 3rem;
+  border: none;
+  border-radius: 20%;
+  background-color: #86b6f6;
+  margin-bottom: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  display: inline-block;
+  transition: ease-in-out 0.3s;
+}
+
+.backBtn:hover{
+  width: 4.5rem;
+  height: 4rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.arrowBack{
+  font-size: 2rem !important;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+.levelSelector{
+    display: flex;
+    flex-direction: row;
+    padding-left: 2rem;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.levelBtn{
+    width: 7rem;
+    height: 7rem;
+    background-color: rgba(180, 212, 255, 1);
+    border: none;
+    border-radius: 10%;
+    margin: 3rem;
+    box-shadow: rgba(180, 212, 255, 0.6) -5px 5px, rgba(180, 212, 255, 0.5) -10px 10px, rgba(180, 212, 255, 0.4) -15px 15px, rgba(180, 212, 255, 0.2) -20px 20px, rgba(180, 212, 255, 0.1) -25px 25px;
+    transition: ease-in-out 0.30s;
+}
+
+.levelBtn:hover{
+    box-shadow: none;
+    width: 8rem;
+    height: 8rem;
+}
+
+.levelBtnText{
+    color: white;
+    font-weight: 600;
+    font-size: 42px;
+}
+
+.lockedIcon{
+  font-size: 5rem !important;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 80vh;
+}
+
+.leftCol{
+    padding: 1rem 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.CompanyName{
+    font-weight: 500;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.infoBtn{
+    width: 256px;
+    padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    border: none;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 0.25s;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.infoBtn:hover{
+    background-color: rgba(200,200,200, 0.9);
+}
+
+.rightCol{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+.emailText{
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    display: flex;
+    padding: 0 1rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.kode{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.containerBelow{
+    width: auto;
+    height: 16vh;
+    padding: 1rem 2.5rem;
+    background-color: #b4d4ff;
+}
+
+.checkBtn{
+  width: 3rem;
+  height: 3rem;
+  background-color: #86b6F6;
+  display: flex;
+  justify-content: center;
+}
+
+.checkBtnIcon{
+  display: flex;
+  justify-self: center;
+  align-self: center ;
+}
+.aboutHeader{
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutOurCompany{
+  visibility: hidden;
+  width: 50vw;
+  height: 75vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 25vw;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px, rgba(0,0,0,0.5) 0 0 50vh 50vw;
+  overflow: scroll;
+}
+
+.aboutCompanyName{
+  display: inline-block;
+  font-size: 42px;
+}
+
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+/* Icons */
