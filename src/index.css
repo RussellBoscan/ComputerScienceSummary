@@ -360,6 +360,17 @@ body{
                  1px -1px 8px rgba(225, 247, 245, 1);
 }
 
+.glowDiv{
+    transition: ease-in-out 0.25s;
+}
+
+.glowDiv:hover{
+    box-shadow: 1px 1px 10px rgba(225, 247, 245, 1),
+                1px -1px 8px rgba(225, 247, 245, 1);
+    cursor:pointer;
+}
+
+
 .glowLink{
     transition: ease-in-out 0.2s;
 }
